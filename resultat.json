@@ -1,0 +1,140 @@
+{
+    "parsed_structure": [
+        {
+            "type": "instruction",
+            "value": "I"
+        },
+        {
+            "type": "boucle",
+            "content": [
+                {
+                    "type": "si",
+                    "condition": "0",
+                    "content": [
+                        {
+                            "type": "fin"
+                        }
+                    ]
+                },
+                {
+                    "type": "instruction",
+                    "value": "D"
+                }
+            ]
+        },
+        {
+            "type": "boucle",
+            "content": [
+                {
+                    "type": "boucle",
+                    "content": [
+                        {
+                            "type": "instruction",
+                            "value": "D"
+                        },
+                        {
+                            "type": "si",
+                            "condition": "1",
+                            "content": [
+                                {
+                                    "type": "fin"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "instruction",
+                    "value": "0"
+                },
+                {
+                    "type": "instruction",
+                    "value": "D"
+                },
+                {
+                    "type": "si",
+                    "condition": "0",
+                    "content": [
+                        {
+                            "type": "fin"
+                        }
+                    ]
+                },
+                {
+                    "type": "boucle",
+                    "content": [
+                        {
+                            "type": "instruction",
+                            "value": "G"
+                        },
+                        {
+                            "type": "si",
+                            "condition": "1",
+                            "content": [
+                                {
+                                    "type": "fin"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "instruction",
+                    "value": "D"
+                },
+                {
+                    "type": "instruction",
+                    "value": "1"
+                },
+                {
+                    "type": "instruction",
+                    "value": "D"
+                }
+            ]
+        },
+        {
+            "type": "boucle",
+            "content": [
+                {
+                    "type": "instruction",
+                    "value": "G"
+                },
+                {
+                    "type": "si",
+                    "condition": "1",
+                    "content": [
+                        {
+                            "type": "fin"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "boucle",
+            "content": [
+                {
+                    "type": "instruction",
+                    "value": "G"
+                },
+                {
+                    "type": "si",
+                    "condition": "0",
+                    "content": [
+                        {
+                            "type": "fin"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "instruction",
+            "value": "D"
+        },
+        {
+            "type": "instruction",
+            "value": "I"
+        }
+    ]
+}
