@@ -3,7 +3,7 @@ import json
 import sys
 
 def read_file_lines(filename):
-    # 尝试不同的编码读取文件
+    # différents encodages pour lire le fichier
     encodings = ['utf-8', 'latin-1', 'cp1252', 'iso-8859-1']
     for encoding in encodings:
         try:
@@ -19,7 +19,7 @@ def parse_line(line):
     if not line or line.startswith('%') or line.startswith('#'):
         return []
     
-    # 使用正则表达式匹配指令
+    # regex pour trouver les instructions
     pattern = r'si\s*\(.*?\)|boucle|fin|pause|[}{]|[A-Za-z0-9]+'
     tokens = re.findall(pattern, line)
     
@@ -27,7 +27,7 @@ def parse_line(line):
     for token in tokens:
         token = token.strip()
         if re.match(r'si\s*\(.*?\)', token):
-            # 处理条件指令，如 si(0) 或 si (1)
+            # pour les différentes conditions
             condition = re.search(r'\((.*?)\)', token).group(1)
             parsed_instructions.append({"type": "si", "condition": condition, "content": []})
         elif token == 'boucle':
@@ -63,7 +63,7 @@ def parse_instructions(lines):
                 if stack:
                     stack.pop()
                 else:
-                    print("警告：未找到匹配的块开始标记")
+                    print("pattern non trouvé")
                 continue
             elif parsed["type"] in ["si", "boucle"]:
                 if stack:
@@ -99,8 +99,8 @@ if __name__ == "__main__":
     
     result = read_turing_file(input_filename)
     
-    # 将结果写入 JSON 文件
+    # stocker les résultats sous forme json
     with open(output_filename, 'w', encoding='utf-8') as f:
         json.dump(result, f, indent=4, ensure_ascii=False)
     
-    print(f"解析结果已保存到 {output_filename}")
+    print(f"output: {output_filename}")
