@@ -41,7 +41,7 @@ def parse_line(line):
         elif token in ['I', 'G', 'D', '0', '1']:
             parsed_instructions.append({"type": "instruction", "value": token})
         else:
-            # 如果有未识别的指令
+            # s'il existe des instructions non reconnues:
             parsed_instructions.append({"type": "instruction", "value": token})
     
     return parsed_instructions
@@ -91,7 +91,7 @@ def read_turing_file(filename):
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        print("用法: python read_turing_file.py <输入文件名> <输出文件名>")
+        print("Veuillez entrer le fichier d'entrée et le fichier de sortie, exemple: python analyseur.py nom_entree nom_sortie")
         sys.exit(1)
     
     input_filename = sys.argv[1]

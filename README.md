@@ -1,6 +1,8 @@
 # Projet Calculabilités - Analyseur Syntaxique de MTddV
 
 - Le projet consiste à créer un générateur automatique de préconditions et postconditions pour un programme écrit dans un format spécifique appelé MTddV (Machine de Turing de M. del Vigna). L’objectif est de diviser ce processus en plusieurs modules, avec une équipe se concentrant sur le Module 1
+## Comment lancer le script analyseur.py?
+`python analyseur.py <nom_du_fichier_entree> <nom_du_fichier_sortie>`
 
 ## Objectif du projet
 - **Analyse syntaxique:** le Module 1 doit analyser un programme écrit en MTddV, en vérifiant sa syntaxe. Cela inclut la détection des différentes instructions (comme "si", "boucle", "fin", "instruction"), ainsi que leur organisation logique.
@@ -20,6 +22,7 @@ Dans la fonction parse_line, des expressions régulières sont utilisées pour i
 2. Les mots-clés comme boucle, fin, pause, etc.
 3. Les instructions simples (I, D, G, 0, 1).
 - `json`: Conversion de la structure arborescente en un format JSON pour stockage ou transfert -> À la fin du script, le résultat est exporté en un fichier JSON via cette bibliothèque
+- `sys`: Pour récupérer les arguments de ligne de commande (nom du fichier d'entrée et fichier de sortie).
 ### Parsing
 - Dans `analyseur.py`, chaque ligne du programme est analysée pour identifier des mots-clés comme si(condition), boucle, ou des instructions simples comme I, D, ou G.
 
