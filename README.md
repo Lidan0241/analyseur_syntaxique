@@ -7,7 +7,7 @@
 ## Objectif du projet
 - **Analyse syntaxique:** le Module 1 doit analyser un programme écrit en MTddV, en vérifiant sa syntaxe. Cela inclut la détection des différentes instructions (comme "si", "boucle", "fin", "instruction"), ainsi que leur organisation logique.
 
-- **Transformation en structure arborescente:** une fois le programme analysé, le module doit convertir ce code en une structure de données arborescente(Nous avons choisi en JSON). Cette structure facilite la compréhension de la hiérarchie et des relations entre les différentes parties du programme. Par exemple, les instructions dans une boucle ou une condition seront représentées comme des enfants dans cette arborescence.Cette structure arborescente sera ensuite transmise au Module 2, qui générera les assertions nécessaires (préconditions et postconditions).
+- **Transformation en structure arborescente:** une fois le programme analysé, le module doit convertir ce code en une structure de données arborescente(Nous avons choisi en JSON). Cette structure facilite la compréhension de la hiérarchie et des relations entre les différentes parties du programme. Par exemple, les instructions dans une boucle ou une condition seront représentées comme des enfants dans cette arborescence. Cette structure arborescente sera ensuite transmise au Module 2, qui générera les assertions nécessaires (préconditions et postconditions).
 
 ## Méthodologie
 L'arbre doit représenter :
